@@ -10,17 +10,21 @@
 	开关机按钮：PIN5(BCM3) PIN9(GND)  
 
 ## 系统配置：  
-	1、首先安装vim工具，执行：  
+	1、首先安装vim工具，执行：
+	
 	``` c
 	sudo apt-get install vim命令
 	```
 	2、更换国内源，中科大的源：  
+	
 	``` c
 	Raspbian http://mirrors.ustc.edu.cn/raspbian/raspbian/
     	sudo nano /etc/apt/sources.list
-   	sudo nano /etc/apt/sources.list.d/raspi.list
+   	sudo nano /etc/apt/sources.list.d/raspi.list  
+	
 	```
-	3、安装pip3包：  
+	3、安装pip3包： 
+	
 	``` c
   	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
   	sudo apt-get install python3-distutils
@@ -33,6 +37,7 @@
 	2、必须要的安装包：  
 	paho-mqtt、vim、pyserial、sudo apt-get install python3-rpi.gpio  
 	3、设置树莓派不休眠：  
+	
 	``` c
     	cd /etc/profile.d
    	sudo vim screen.sh
@@ -40,11 +45,13 @@
    	xset s off
 	```
 	4、设置树莓派硬件UART：  
-	修改cmdline.txt文件，将所有有关console的全部内容删掉并关闭板载蓝牙  
+	修改cmdline.txt文件，将所有有关console的全部内容删掉并关闭板载蓝牙 
+	
 	``` c
    	sudo systemctl disable hciuart
 	```
-	编辑config.txt文件增加：  
+	编辑config.txt文件增加： 
+	
 	``` c
     	dtoverlay=pi3-disable-bt
     	sudo shutdown -r now
@@ -52,6 +59,7 @@
   	sudo shutdown -r now
 	```
 	5、设置脚本自启动：将脚本放置在/boot目录下，配置文件config.json文件放在/boot目录下，方便系统烧录前做相关配置。  
+	
 	``` c
    	sudo chmod -R 777 /boot/craftsman
     	sudo vim /etc/rc.local
