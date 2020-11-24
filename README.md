@@ -1,15 +1,15 @@
-##功能描述：  
+## 功能描述：  
 	1、获取甲醛传感数据，通讯方式UART方式，实现了主动上传和问答式回传，传感数据异常报警机制。  
 	2、传感数据上传EMQ平台，使用MQTT协议将传感数据周期上传EMQ平台，网络自检机制，发现断网后，主动重连。  
 	3、状态指示，上电联网成功与否指示灯，传感数据采集状态指示灯，传感数据正常周期闪烁，错误指示灯熄灭。  
   
-##设备引脚对应关系图：  
+## 设备引脚对应关系图：  
 	电源指示灯：PIN4(5V)  PIN6(GND)  
 	Online指示灯：PIN12(BCM18) PIN14(GND)  
 	数据采集指示灯：PIN11(BCM17) PIN9(GND)  
 	开关机按钮：PIN5(BCM3) PIN9(GND)  
 
-##系统配置：  
+## 系统配置：  
 1、首先安装vim工具，执行：  
 '''
     sudo apt-get install vim命令
@@ -28,7 +28,7 @@
 	pip3 --version
 '''  
 
-##系统配置清单：  
+## 系统配置清单：  
 1、SSH和VNC远程登录：使用hostname登录系统，hostname为craftsman，系统登录名：密码为pi:raspberry。  
 2、必须要的安装包：  
 paho-mqtt、vim、pyserial、sudo apt-get install python3-rpi.gpio  
