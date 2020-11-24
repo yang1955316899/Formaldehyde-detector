@@ -31,7 +31,7 @@
 ##系统配置清单：  
 1、SSH和VNC远程登录：使用hostname登录系统，hostname为craftsman，系统登录名：密码为pi:raspberry。  
 2、必须要的安装包：  
->paho-mqtt、vim、pyserial、sudo apt-get install python3-rpi.gpio
+paho-mqtt、vim、pyserial、sudo apt-get install python3-rpi.gpio  
 3、设置树莓派不休眠：  
 '''
     cd /etc/profile.d
