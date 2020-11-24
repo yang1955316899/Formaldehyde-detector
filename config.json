@@ -1,0 +1,14 @@
+{
+    // onenet平台IP地址(mqtt协议)
+	"host": "183.230.40.39",
+	// onenet平台端口号
+	"port": 6002,
+	// 产品ID号
+	"namespace": "345719",
+	"keepalive": 10,
+	// 设备ID号
+	"client_id": "598256294",
+	// onenet平台IP地址(mqtt协议)
+	"auif": "nange123456"
+    
+}
