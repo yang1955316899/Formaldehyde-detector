@@ -45,14 +45,14 @@
    	sudo systemctl disable hciuart
 	```
 	编辑config.txt文件增加：  
-	```
+	```  
     	dtoverlay=pi3-disable-bt
     	sudo shutdown -r now
   	sudo raspberry-config
   	sudo shutdown -r now
 	```
 	5、设置脚本自启动：将脚本放置在/boot目录下，配置文件config.json文件放在/boot目录下，方便系统烧录前做相关配置。  
-	```
+	```  
    	sudo chmod -R 777 /boot/craftsman
     	sudo vim /etc/rc.local
     	su pi -c "exec /boot/craftsman/onreboot.sh"
