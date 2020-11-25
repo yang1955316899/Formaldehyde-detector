@@ -18,7 +18,7 @@ Online指示灯：PIN12(BCM18) PIN14(GND)
 1、首先安装vim工具，执行：
 
 ``` shell
-	sudo apt-get install vim命令
+	sudo apt-get install vim
 ```
 2、更换国内源，中科大的源：  
 
