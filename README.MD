@@ -17,12 +17,12 @@ Online指示灯：PIN12(BCM18) PIN14(GND)
 
 1、首先安装vim工具，执行：
 
-``` c
+``` shell
 	sudo apt-get install vim命令
 ```
 2、更换国内源，中科大的源：  
 
-``` c
+``` shell
 	Raspbian http://mirrors.ustc.edu.cn/raspbian/raspbian/
 	sudo nano /etc/apt/sources.list
 	sudo nano /etc/apt/sources.list.d/raspi.list  
@@ -30,7 +30,7 @@ Online指示灯：PIN12(BCM18) PIN14(GND)
 ```
 3、安装pip3包： 
 
-``` c
+``` shell
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	sudo apt-get install python3-distutils
 	sudo python3 get-pip.py
@@ -43,7 +43,7 @@ Online指示灯：PIN12(BCM18) PIN14(GND)
 paho-mqtt、vim、pyserial、sudo apt-get install python3-rpi.gpio  
 3、设置树莓派不休眠：  
 
-``` c
+``` shell
 	cd /etc/profile.d
 	sudo vim screen.sh
 	xset dpms 0 0 0
@@ -52,12 +52,12 @@ paho-mqtt、vim、pyserial、sudo apt-get install python3-rpi.gpio
 4、设置树莓派硬件UART：  
 修改cmdline.txt文件，将所有有关console的全部内容删掉并关闭板载蓝牙 
 
-``` c
+``` shell
 	sudo systemctl disable hciuart
 ```
 编辑config.txt文件增加： 
 
-``` c
+``` shell
 	dtoverlay=pi3-disable-bt
 	sudo shutdown -r now
 	sudo raspberry-config
@@ -65,7 +65,7 @@ paho-mqtt、vim、pyserial、sudo apt-get install python3-rpi.gpio
 ```
 5、设置脚本自启动：将脚本放置在/boot目录下，配置文件config.json文件放在/boot目录下，方便系统烧录前做相关配置。  
 
-``` c
+``` shell
 	sudo chmod -R 777 /boot/craftsman
 	sudo vim /etc/rc.local
 	su pi -c "exec /boot/craftsman/onreboot.sh"
