@@ -11,6 +11,7 @@ ___
 Online指示灯：PIN12(BCM18) PIN14(GND)  
 数据采集指示灯：PIN11(BCM17) PIN9(GND)  
 开关机按钮：PIN5(BCM3) PIN9(GND)  
+
 ![引脚图示](https://shumeipai.nxez.com/wp-content/uploads/2015/03/rpi-pins-40-0.png)
 ## 系统配置：
 
