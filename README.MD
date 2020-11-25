@@ -11,7 +11,7 @@ ___
 Online指示灯：PIN12(BCM18) PIN14(GND)  
 数据采集指示灯：PIN11(BCM17) PIN9(GND)  
 开关机按钮：PIN5(BCM3) PIN9(GND)  
-![引脚图示](GPIO_Pi2_e14.png)
+![引脚图示](https://raw.githubusercontent.com/yang1955316899/Formaldehyde-detector/main/GPIO_Pi2_e14.png)
 ## 系统配置：
 
 1、首先安装vim工具，执行：
